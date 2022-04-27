@@ -50,7 +50,7 @@ body{
 
 
 
-.calculator-display{
+.calculator__display{
     background-color: var(--grey-900);
     color: var(--grey-050);
     width: 16.25rem;
@@ -61,7 +61,7 @@ body{
 }
 
 
-.calculator-keys{
+.calculator__keys{
     background-color: var(--grey-200);
     display: grid;
     gap: 1px;
@@ -76,7 +76,7 @@ body{
 
 
 
-.calculator-keys > button{
+.calculator__keys > button{
     border: 0;
 }
 
