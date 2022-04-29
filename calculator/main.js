@@ -12,22 +12,36 @@ keys.addEventListener('click', event => {
     const key = event.target
     const keyValue = key.textContent
     const displayValue = display.textContent
+    const {type} = key.dataset
+    const {previousKeyType} = calculator.dataset
     //Is this a Number key
 
-    if (key.classList.contains('number')){
+    if (type ==='number'){
 
         if (displayValue === '0'){ 
         display.textContent = keyValue
-        } else {
+        } else if (previousKeyType === 'operator') {
+
+            display.textContent = keyValue
+        }
+        
+        
+        else {
             display.textContent = displayValue + keyValue
         }
+
+
     }
 
     //Is this a Operator key
     
-    if(key.dataset.type === 'operator') {
+    if(type === 'operator') {
         console.log(key)
 
         calculator.dataset.previousKeyType = 'operator'
     }
+
+
+    calculator.dataset.previousKeyType = type
+
 })

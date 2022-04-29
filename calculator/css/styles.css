@@ -147,18 +147,18 @@ grid-area: one;
 }
 
 
-.operator{
+[data-type="operator"]{
     background-color: var(--grey-100);
 }
 
 
-.number{
+[data-type="number"]{
     background-color: white;
 }
 
 
-.operator:active,
-.number:active{
+[data-type="operator"]:active,
+[data-type="number"]:active{
     background-color: var(--grey-200);
 }
 
