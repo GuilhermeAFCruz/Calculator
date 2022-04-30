@@ -166,6 +166,9 @@ grid-area: one;
     background-color: var(--orange-600);
 }
 
+[data-state="selected"]{
+    background-color: var(--grey-200);
+}
 
 
 
