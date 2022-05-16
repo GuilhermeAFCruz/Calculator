@@ -40,18 +40,26 @@ keys.addEventListener('click', event => {
     if (type === 'equal') {
         const firstNumber = calculator.dataset.firstNumber
         const operator = calculator.dataset.operator
+        
         const secondNumber = displayValue
+        console.log(secondNumber);
 
         display.textContent = calculate(firstNumber, operator, secondNumber)
     }
 
     if (type === 'clear') {
+         display.textContent = '0'
+         calculator.dataset.firstNumber = '0'
+         delete calculator.dataset.operator
 
     }
 
     calculator.dataset.previousKeyType = type
 
 })
+
+        
+    
 
 function calculate (firstNumber, operator, secondNumber) {
     firstNumber = parseFloat(firstNumber)

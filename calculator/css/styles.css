@@ -152,13 +152,15 @@ grid-area: one;
 }
 
 
-[data-type="number"]{
+[data-type="number"],
+[data-type='clear']{
     background-color: white;
 }
 
 
 [data-type="operator"]:active,
-[data-type="number"]:active{
+[data-type="number"]:active,
+[data-type='clear']:active{
     background-color: var(--grey-200);
 }
 
